@@ -14,6 +14,7 @@ public class MyInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        // TODO, 处理各种各样的annotation
         return method.invoke(this.target, args);
     }
 }

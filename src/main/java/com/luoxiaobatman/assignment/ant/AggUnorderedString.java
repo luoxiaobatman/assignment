@@ -1,6 +1,10 @@
 package com.luoxiaobatman.assignment.ant;
 
+import com.luoxiaobatman.assignment.solution.Answer;
+import com.luoxiaobatman.assignment.solution.DefaultAnswer;
 import com.luoxiaobatman.assignment.solution.Solution;
+import com.luoxiaobatman.assignment.support.Cache;
+import com.luoxiaobatman.assignment.support.Factory;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -11,7 +15,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * unstable
  * concurrent
  */
-public class AggUnorderedString implements Solution<Collection<Queue<AggUnorderedString.Wrapper>>> {
+public class AggUnorderedString implements Solution {
     private final List<String> list;
 
     private volatile Collection<Queue<Wrapper>> cache = null;
@@ -20,11 +24,10 @@ public class AggUnorderedString implements Solution<Collection<Queue<AggUnordere
         this.list = list;
     }
 
+    @Cache
     @Override
-    public Collection<Queue<Wrapper>> solve() {
-        if (Objects.nonNull(cache)) {
-            return cache;
-        }
+    public Answer solve() {
+        Answer answer = Factory.of(Answer.class).newInstance();
 
         Map<String, Queue<Wrapper>> hashMap = new ConcurrentHashMap<>();
         cache = list
@@ -38,7 +41,7 @@ public class AggUnorderedString implements Solution<Collection<Queue<AggUnordere
                             Queue<Wrapper> defaultQ = new LinkedBlockingQueue<>();
                             defaultQ.offer(s);
                             Queue<Wrapper> q = m.putIfAbsent(s.getKey(), defaultQ);
-                            if (Objects.nonNull(q)) {
+                            if (q != null) {
                                 Wrapper first = q.peek();
                                 s.computeAndFillOrdered();
                                 assert first != null;
@@ -53,7 +56,7 @@ public class AggUnorderedString implements Solution<Collection<Queue<AggUnordere
                                     q.offer(s);
                                 } else {
                                     q = m.putIfAbsent(s.getOrdered(), defaultQ);
-                                    if (Objects.nonNull(q)) {
+                                    if (q != null) {
                                         q.offer(s);
                                     }
                                 }
@@ -61,7 +64,8 @@ public class AggUnorderedString implements Solution<Collection<Queue<AggUnordere
                             return m;
                         }, (a, b) -> a
                 ).values();
-        return cache;
+        answer.setAnswer(hashMap);
+        return answer;
     }
 
     public static class Wrapper {

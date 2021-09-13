@@ -1,7 +1,8 @@
 package com.luoxiaobatman.assignment.ant;
 
 
-import com.luoxiaobatman.assignment.solution.SolutionFactory;
+import com.luoxiaobatman.assignment.solution.Solution;
+import com.luoxiaobatman.assignment.support.Factory;
 
 import java.util.*;
 
@@ -11,14 +12,14 @@ import java.util.*;
  * deadline
  * 直接用main函数演示
  */
+@SuppressWarnings("rawtypes")
 public class Main {
-    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
+        Factory<Solution> solutionFactory = Factory.of(Solution.class);
         // 问题1 START
-        List<String> strings = Arrays.asList("foo", "bar", "baz", "oof", "", null);
-        AggUnorderedString aggUnorderedStringSolution = SolutionFactory.get(AggUnorderedString.class, strings);
-        Collection<Queue<AggUnorderedString.Wrapper>> aggUnorderedStringSolutionResult = aggUnorderedStringSolution.solve();
-        System.out.println(aggUnorderedStringSolutionResult);
+        List<String> strings = Arrays.asList("foo", "bar", "baz", "oof", "", "dasfadsfa", "sadfad", null);
+        Solution solution = solutionFactory.newInstance(AggUnorderedString.class, strings);
+        System.out.println(solution.solve());
         System.out.println("---------------------");
         // 问题1 END
 

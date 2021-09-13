@@ -1,41 +1,38 @@
 package com.luoxiaobatman.assignment.ant;
 
 
-import lombok.extern.java.Log;
-import lombok.extern.slf4j.Slf4j;
-import net.jmatrix.console.log.ColorConsoleLogger;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ParameterResolver;
+import com.luoxiaobatman.assignment.ant.provider.argument.AggUnorderdStringArgumentProvider;
+import com.luoxiaobatman.assignment.solution.Solution;
+import com.luoxiaobatman.assignment.support.Factory;
+import org.junit.jupiter.api.TestReporter;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
-import org.junit.platform.commons.logging.LoggerFactory;
-import org.slf4j.event.Level;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import java.beans.BeanProperty;
-import java.util.Arrays;
-import java.util.stream.Stream;
+import java.util.Collection;
+import java.util.List;
+import java.util.Queue;
 
-/**
- * end with test not start with
- * same package, to access protected
- */
-@Slf4j
 public class AggUnorderedStringTest {
-//    @ParameterizedTest
-//    @ArgumentsSource(MyArgumentsProvider.class)
-    @TestFactory
-    public DynamicNode[] solveTest(String foo) {
-        ParameterResolver
-        DynamicTest dynamicTest = DynamicTest.dynamicTest("name-foo", new MyFactorExcutor());
-        return new DynamicNode[] {dynamicTest, dynamicTest};
+    /**
+     * 黑盒测试, TODO, 检查return value
+     * @param strings 原始
+     * @param reporter 报告
+     */
+    @ParameterizedTest(name = ParameterizedTest.INDEX_PLACEHOLDER )
+    @ArgumentsSource(AggUnorderdStringArgumentProvider.class)
+    public void solveTest(List<String> strings, TestReporter reporter) {
+        Factory<Solution> solutionFactory = Factory.of(Solution.class);
+        Solution solution = solutionFactory.newInstance(AggUnorderedString.class);
+        Object solve = solution.solve();
+        reporter.publishEntry("problem", strings.toString());
+        reporter.publishEntry("result", solve.toString());
     }
 
-    @BeforeAll
-    public static void beforeAll() {
-        ColorConsoleLogger.setGlobalLevel(Level.INFO);
-    }
+    /**
+     * 提供多种实现, 记录耗时, 输出表格
+     */
+    public void timed() {
 
-    @AfterAll
-    public static void afterAll() {
     }
 }
