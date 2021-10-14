@@ -8,16 +8,17 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 /**
- * 回文数据集
+ * 子集和
+ * 顺序按照自然数增需, 下标比特位
  */
-public class PalindromeProvider implements ArgumentsProvider {
+public class SubsetSumProvider implements ArgumentsProvider {
     @Override
     public Stream<? extends Arguments> provideArguments(ExtensionContext context) throws Exception {
         return Arrays.stream(new Arguments[] {
-                Arguments.of("a", "a"),
-                Arguments.of("abba", "abba"),
-                Arguments.of("fddsa", "dd"),
-                Arguments.of("0110accca12", "accca"),
+                Arguments.of(new int[]{}, new int[] {0}),
+                Arguments.of(new int[]{1}, new int[]{0, 1}),
+                Arguments.of(new int[]{-1}, new int[]{0, -1}),
+                Arguments.of(new int[]{-1, 1}, new int[]{0, -1, 1, 0}),
         });
     }
 }

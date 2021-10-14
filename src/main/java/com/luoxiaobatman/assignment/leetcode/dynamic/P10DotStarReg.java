@@ -2,6 +2,7 @@ package com.luoxiaobatman.assignment.leetcode.dynamic;
 
 import com.luoxiaobatman.assignment.solution.Answer;
 import com.luoxiaobatman.assignment.solution.Solution;
+import com.luoxiaobatman.assignment.support.Factory;
 import lombok.AllArgsConstructor;
 
 import java.util.*;
@@ -23,10 +24,12 @@ import java.util.stream.Collectors;
  */
 @AllArgsConstructor
 public class P10DotStarReg implements Solution {
-    public static void main(String[] args) {
-        String source = "aab";
+    private final String source;
+    private final String pattern;
+
+    @Override
+    public Answer solve() {
         int len = source.length();
-        String pattern = "c*a*b";
         List<Integer> state = new ArrayList<>();
         if (pattern.charAt(0) == '*') {
             state.add(0);
@@ -84,34 +87,20 @@ public class P10DotStarReg implements Solution {
             }
         }
         state = dp[i - 1];
+        boolean flag = false;
         if (state == null || state.isEmpty()) {
-            System.out.println(false);
+            flag = false;
         } else {
             Integer last = state.get(state.size() - 1);
             if (last <= 0 || last == len) {
-                System.out.println(true);
             } else {
                 if (pattern.endsWith("*")) {
-                    System.out.println(true);
+                    flag = true;
                 } else {
-                    System.out.println(false);
+                    flag = false;
                 }
             }
         }
-    }
-
-    private boolean improvised() {
-        return true;
-    }
-
-    private String source;
-    private String pattern;
-
-    @Override
-    public Answer solve() {
-//        for (int i = 0; i <; i++) {
-//
-//        }
-        return null;
+        return Factory.of(Answer.class).newInstance(flag);
     }
 }

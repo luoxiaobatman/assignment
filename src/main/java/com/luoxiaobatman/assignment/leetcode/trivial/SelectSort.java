@@ -4,6 +4,7 @@ import com.luoxiaobatman.assignment.solution.Answer;
 import com.luoxiaobatman.assignment.solution.Solution;
 import com.luoxiaobatman.assignment.support.Factory;
 import lombok.AllArgsConstructor;
+import sun.misc.Unsafe;
 
 import java.util.Arrays;
 

@@ -1,6 +1,5 @@
 package com.luoxiaobatman.assignment.unclassified;
 
-import io.netty.util.NettyRuntime;
 
 import java.io.IOException;
 import java.util.zip.CRC32;

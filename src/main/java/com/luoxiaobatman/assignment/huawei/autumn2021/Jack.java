@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class DeZhouPuKe {
+public class Jack {
     public static class Card {
         /**
          * 1    2    3     4
