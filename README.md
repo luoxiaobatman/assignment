@@ -136,4 +136,9 @@ tips:
       - 
     * 高可用设计
     * 性能设计
-        - 消息的批处理, pagecache, zerocopy, 
+        - 消息的批处理, pagecache, zerocopy,
+    
+
+
+
+很努力的在收集，到目前为止，只能给你们那么多了，一下好听的电音，拿走不谢。(ngau) (feded) (spectre) (seve) (Nevada) (china) (time) (sky) (mepeke) (unity) (monody) (horizon) (higher) (leeviss) (shadows) (visions) (sunburst) (windfall) (friendships) (we no speakmameericano) (take meto in finty) (migenre) 我不希望这条沉下去
