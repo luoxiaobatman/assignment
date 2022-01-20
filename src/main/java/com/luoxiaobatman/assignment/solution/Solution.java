@@ -1,5 +1,6 @@
 package com.luoxiaobatman.assignment.solution;
 
+import com.luoxiaobatman.assignment.support.DefaultInvocationHandler;
 import com.luoxiaobatman.assignment.support.Invoker;
 
 /**
@@ -11,7 +12,7 @@ import com.luoxiaobatman.assignment.support.Invoker;
  * 描述解是否稳定 @see
  * 解簇
  */
-@Invoker
+@Invoker(DefaultInvocationHandler.class)
 public interface Solution {
     Answer solve();
 }

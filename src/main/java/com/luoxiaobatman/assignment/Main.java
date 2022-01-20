@@ -4,7 +4,10 @@ import sun.misc.Unsafe;
 
 import java.lang.ref.Cleaner;
 import java.nio.channels.AsynchronousSocketChannel;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -21,7 +24,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        System.out.println(InstanceHolder.instance);
-        // JVM
+        System.out.println(
+            new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZ yyyy", Locale.ENGLISH).format(new Date())
+        );
     }
 }

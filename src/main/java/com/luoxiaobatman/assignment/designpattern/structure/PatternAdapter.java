@@ -16,7 +16,7 @@ package com.luoxiaobatman.assignment.designpattern.structure;
  *     <li>可重新定义adaptee行为</li>
  * </ul>
  * {@link PatternBridge}: 相似, 接口部分与实现部分分离
- * {@link PatternDecrator}: 接口的实现增加功能性, 透明, 递归
+ * {@link PatternDecorator}: 接口的实现增加功能性, 透明, 递归
  * {@link PatternProxy}: Proxy具有相同的接口
  */
 public class PatternAdapter {

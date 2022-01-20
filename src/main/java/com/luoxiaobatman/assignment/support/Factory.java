@@ -14,14 +14,11 @@ import java.util.Arrays;
  * @param <IF> 生产的类实现的接口
  */
 public interface Factory<IF> {
+    <T extends IF> IF newInstance(Class<T> clazz, Object... args);
+    default IF newInstance(Object... args) {
+        return newInstance(null, args);
+    };
 
-    /**
-     *
-     * @param factoryClazz
-     * @param args Cons
-     * @param <F> FactoryImpl
-     * @return an instance of Factory
-     */
     @SuppressWarnings("unchecked")
     static <F extends Factory<?>> F factory(Class<F> factoryClazz, Object... args) {
         // TODO check subclass of Factory
@@ -34,54 +31,26 @@ public interface Factory<IF> {
 
     @SuppressWarnings("unchecked")
     static <IF> Factory<IF> of(Class<IF> iType) {
-        Invoker invoker = iType.getAnnotation(Invoker.class);
-        if (invoker != null) {
-            return Factory.of(iType, invoker.value());
-        }
-        return Factory.of(iType, DefaultInvocationHandler.class);
+        Default aDefault = iType.getAnnotation(Default.class);
+        assert  aDefault != null;
+        Class<? extends IF> cType = (Class<? extends IF>) aDefault.value();
+        return Factory.of(iType, cType);
     }
 
-    /**
-     * @param iType
-     * @param typeInvocationHandler proxy handler
-     * @param <IF> interface you want to create
-     * @return an instance of Factory
-     */
     @SuppressWarnings("unchecked")
-    static <IF> Factory<IF> of(Class<IF> iType, Class<? extends InvocationHandler> typeInvocationHandler) {
-        assert iType.isInterface();
-
-        return new Factory<>() {
-            @Override
-            public <T extends IF> T newInstance(Class<T> clazz, Object... args) {
-                if (clazz == null) {
-                    Default aDefault = iType.getAnnotation(Default.class);
-                    if (aDefault != null) {
-                        clazz = (Class<T>) aDefault.value();
-                    } else {
-                        throw new NullPointerException("clazz is null and interface has no Default implementation");
-                    }
-                }
-                try {
-                    Class<?>[] classes = Arrays.stream(args).map(Object::getClass).toArray(Class[]::new);
-                    // TODO getConstructor 的方式
-                    Object instance = clazz.getConstructors()[0].newInstance(args);
-                    InvocationHandler invocationHandler = (InvocationHandler) typeInvocationHandler.getConstructors()[0].newInstance(instance);
-                    return (T) Proxy.newProxyInstance(
-                            clazz.getClassLoader(),
-                            new Class[] {iType},
-                            invocationHandler
-                    );
-                } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-//                } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                    throw new RuntimeException();
-                }
-            }
-        };
+    static <IF> Factory<IF> of(Class<IF> iType, Class<? extends IF> cType) {
+        Invoker invoker = cType.getAnnotation(Invoker.class);
+        if (invoker == null) {
+            invoker = iType.getAnnotation(Invoker.class);
+        }
+        if (invoker != null) {
+            return Factory.of(iType, cType, invoker.value());
+        }
+        return Factory.of(iType, cType, DefaultInvocationHandler.class);
     }
 
-    <T extends IF> IF newInstance(Class<T> clazz, Object... args);
-    default <T extends IF> IF newInstance(Object... args) {
-        return newInstance(null, args);
-    };
+    static <IF> Factory<IF> of(Class<IF> iType, Class<? extends IF> cType, Class<? extends InvocationHandler> typeInvocationHandler) {
+        assert iType.isInterface();
+        return new StandardFactory<>(iType, cType);
+    }
 }

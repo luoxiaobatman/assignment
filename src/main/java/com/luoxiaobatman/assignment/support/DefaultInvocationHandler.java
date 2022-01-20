@@ -7,9 +7,11 @@ import java.lang.reflect.Method;
  * Cache annotation handle
  */
 public class DefaultInvocationHandler implements InvocationHandler {
-    private final Object target;
+    private Object target;
     private Object cache;
 //    private final Map<String, Method> declearedMethod;
+
+    public Object getTarget() {return this.target;}
 
     public DefaultInvocationHandler(Object target) {
         this.target = target;
