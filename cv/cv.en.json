@@ -1,0 +1,421 @@
+{
+  "objective": {
+    "body": "Recognizable Software Engineer Skill, Recognizable Coding Skill, 9-Year Java Coding Experience, No issue Against Pushing",
+    "heading": "Traits",
+    "visible": true
+  },
+  "work": {
+    "heading": "Work Experience",
+    "items": [
+      {
+        "company": "Sina Weibo, Chengdu Dev Center, Chengdu",
+        "position": "Software engineer",
+        "endDate": "now",
+        "startDate": "2016-08-26",
+        "summary": "* In charge of ChengDu dev center supporting platform.\n* In charge of engineer part(vs. algorithm part) of machine learning projects\n* Part of oasis app server side architect team. Design and code various sub systems",
+        "website": "https://weibo.com"
+      },
+      {
+        "company": "Modan, ShenZhen",
+        "endDate": "2016-01-28",
+        "position": "Web Developer",
+        "startDate": "2015-06-27",
+        "summary": "Gaming-box UI and server side management system."
+      },
+      {
+        "company": "Yonyou NC Sales EC Department, Beijing",
+        "endDate": "2015-06-20",
+        "position": "Java Developer",
+        "startDate": "2014-05-21",
+        "summary": "Seller's website, abandon JSP tech, separating frontend and backend",
+        "website": "https://www.yonyou.com"
+      },
+      {
+        "company": "Yonyou, Software Engineer Department",
+        "endDate": "2014-05-20",
+        "position": "Junior Java Developer",
+        "startDate": "2012-09-01",
+        "summary": "Supermarket management server side coding. Driver school management server side architect design and modules coding.",
+        "website": "https://www.yonyou.com"
+      }
+    ],
+    "visible": true
+  },
+  "skills": {
+    "heading": "Skills",
+    "items": [
+      {
+        "isVisible": true,
+        "level": "Advanced",
+        "name": "Java"
+      },
+      {
+        "isVisible": true,
+        "level": "Advanced",
+        "name": "Design | OOP UML"
+      },
+      {
+        "isVisible": true,
+        "level": "Advanced",
+        "name": "MicroService | Registration-Center Config-Center Observability LB etc..."
+      },
+      {
+        "isVisible": true,
+        "level": "Advanced",
+        "name": "Middleware | Mysql Redis Kafka ES etc..."
+      },
+      {
+        "isVisible": true,
+        "level": "Intermediate",
+        "name": "Devops | Shell K8S Istio Docker etc..."
+      },
+      {
+        "isVisible": true,
+        "level": "Intermediate",
+        "name": "Computer | Linux Common-Protocols Common-Algorithm"
+      },
+      {
+        "isVisible": true,
+        "level": "Intermediate",
+        "name": "Language | Js Python Bash"
+      }
+    ],
+    "visible": true
+  },
+  "projects": {
+    "heading": "Projects",
+    "items": [
+      {
+        "startDate": "2019-02-01",
+        "endDate": "now",
+        "summary": "## OasisApp incubates from Weibo, a inns like app.\n\n* We worked all the way from 0 to 1 million dau.\n* Lead Architect Design\n    - Sep code across all departments when dau surge on first launch\n    - Refactor using microservice approach after version 2.0 \n    - Using K8S to Orchestrate all our springboot services\n* Analyse, Design and Coding\n    - Analyse requirements, using UML tools(drawio in my case) to make everything crystal clear, then review the cases inside our team\n    - Coding using OOP approach, design pattern. Writing readable, distributable, scalable codes\n    - We Write Junit test cases when possible, and writes integration test cases when the time is feasible, and keeps codes quality high\n* Tech stack\n    - Springboot\n    - Middlewares: Mysql, Redis, Elasticsearch, Kafka\n    - Docker Container\n    - k8s sidecar mode(We using istio) to make services and its runtimes(which in our case JVM and the docker container) observable.\n    - Using K8S to make our app scalable, gray scale release possible\n* Achievements\n    - From 0 to 300K Dau, from 300K Dau to 1M Dau\n    - Eventually Consistency in High concurrency scenes\n    - App goes from monoservice to microservice, and the experience gained from making that happen is highly valuable and recognizable",
+        "title": "App Oasis"
+      },
+      {
+        "startDate": "2017-04-24",
+        "endDate": "2019-02-01",
+        "summary": "## Weibo machine learning sub-projects\n\n* Weibo Images Categorizing - sub category project\n* Categorize Weather Images for Weibo weather app. \n* Categorize similar background music.\n* Tech stack\n    - Python\n    - Tensorflow\n    - Springboot\n    - Using Kafka, Redis to push and pull data across teams\n    - ELK to collects logs  \n* Achievements\n    - Reduce works done by manually categorize images, boost efficiency.\n    - Boost Weibo weather app user experience and our user spend more time on our app",
+        "title": "Machine Learning"
+      },
+      {
+        "startDate": "2016-08-26",
+        "endDate": "2017-04-24",
+        "summary": "## Chengdu dev center supporting platform\n\n* Refactor all the codes.\n    - Frontend and Backend separation.\n    - Using reactjs framework, and its best practices\n* Tech stack\n    - Springboot\n    - Mysql, Redis, Docker\n    - React, Redux, Ant Design, React Saga, Webpack\n* Achievements\n    - Refactored 100K+ lines code, made use technology possible for our team, boost coding efficiency \n    - Share the experience about refactoring and why we did it.\n",
+        "title": "Supporting Center For Weibo Chengdu"
+      },
+      {
+        "startDate": "2015-06-27",
+        "endDate": "2016-01-28",
+        "summary": "## Modan Gaming-Box Serverside Programming\n\n* All the UI related works\n    - gaming-box side: account management, shop, feedback and social UI \n    - management side: Permission System, Operator Management, Player Management, Shop Management\n* Tech Stack\n    - Nodejs, Expressjs\n    - Reactjs, Ant Design, Webpack",
+        "title": "Modan Gaming Center Platform"
+      },
+      {
+        "startDate": "2014-05-13",
+        "endDate": "2015-06-15",
+        "summary": "## Sales Website\n\n* What have I done?\n    - I lead a web team with 3 person. We dug new Technology and shared across team. We coded UI framework which our website used.\n    - Code seller's organization related business logic.\n    - Coded Sellers income and expenditure chart&report.\n* Share new tech\n    - Shared Reactjs, and used it in our project, abandon JSP, separated frontend and backend.\n    - Coded UI components based on Reactjs.\n* Tech stack\n    - SpringMVC Hibernate Struts Mysql \n* Achievements\n    - Made Separating frontend and backend happen",
+        "title": "NC Seller's Website"
+      },
+      {
+        "startDate": "2013-03-28",
+        "endDate": "2014-05-17",
+        "summary": "## Driver school app server side\n\n* Works I have done\n    - Students fingerprints module CRUD.\n    - Students management module CRUD\n    - Student and teacher daily routine checking, report their daily performance.\n* Tech stack\n    - SpringMVC Hibernate Struts Mysql",
+        "title": "Driving School App's Backend(Outsourcing)"
+      },
+      {
+        "startDate": "2012-08-25",
+        "endDate": "2013-03-20",
+        "summary": "## Supermarket management server side\n\n* Works I have done\n    - Coding supermarket's and business unit relationship module.\n    - Coding staff management module.\n    - Coding about publishing Daily activities and gathering its revenue daily, monthly and yearly. \n    - Coding supermarket finance module.\n* Tech stack\n    - SpringMVC Hibernate Struts Mysql",
+        "title": "Supermarket Website Backend"
+      }
+    ],
+    "visible": true
+  },
+  "awards": {
+    "heading": "Awards",
+    "items": [
+      {
+        "awarder": "Yonyou",
+        "date": "2014-12-13",
+        "id": "",
+        "summary": "",
+        "title": "Outstanding Yonyou New Comer"
+      },
+      {
+        "awarder": "Weibo",
+        "date": "2017-12-01",
+        "id": "",
+        "summary": "",
+        "title": "Weibo innovation award"
+      },
+      {
+        "awarder": "Weibo",
+        "date": "2020-01-15",
+        "id": "",
+        "summary": "",
+        "title": "Team of The Year"
+      }
+    ],
+    "visible": true
+  },
+  "certifications": {
+    "heading": "Certifications",
+    "items": [
+      {
+        "date": "2012-07-01",
+        "issuer": "USTC",
+        "summary": "",
+        "title": "Diploma of University of Science And Technology of China"
+      },
+      {
+        "date": "2012-07-01",
+        "issuer": "USTC",
+        "summary": "",
+        "title": "Bachelor's Degree of University of Science And Technology of China"
+      }
+    ],
+    "visible": true
+  },
+  "education": {
+    "heading": "Education",
+    "items": [
+      {
+        "degree": "Bachelors",
+        "startDate": "2007-09-01",
+        "endDate": "2012-08-01",
+        "field": "Statistics",
+        "institution": "University of Science And Technology of China",
+        "summary": ""
+      }
+    ],
+    "visible": true
+  },
+  "hobbies": {
+    "heading": "Hobbies",
+    "items": [
+      {
+        "name": "Engineer"
+      },
+      {
+        "name": "Reading"
+      },
+      {
+        "name": "Science"
+      },
+      {
+        "name": "Soccer"
+      },
+      {
+        "name": "DIY"
+      },
+      {
+        "name": "Survival"
+      }
+    ],
+    "visible": true
+  },
+
+  "languages": {
+    "heading": "Languages",
+    "items": [
+      {
+        "fluency": "Native Tongue",
+        "name": "Mandarin"
+      },
+      {
+        "fluency": "Read&Write&Listen like natives. Speak just like a beginner",
+        "name": "English"
+      }
+    ],
+    "visible": true
+  },
+  "metadata": {
+    "colors": {
+      "background": "#FFFFFF",
+      "primary": "#4CAF50",
+      "text": "#212121"
+    },
+    "font": "Titillium Web",
+    "fontSize": "10",
+    "language": "zh",
+    "layout": {
+      "castform": [
+        [
+          "awards",
+          "certifications",
+          "languages",
+          "hobbies"
+        ],
+        [
+          "objective",
+          "work",
+          "education",
+          "skills",
+          "projects",
+          "references"
+        ]
+      ],
+      "celebi": [
+        [
+          "awards",
+          "certifications",
+          "languages",
+          "hobbies"
+        ],
+        [
+          "objective",
+          "work",
+          "education",
+          "skills",
+          "projects",
+          "references"
+        ]
+      ],
+      "gengar": [
+        [
+          "objective",
+          "skills"
+        ],
+        [
+          "awards",
+          "certifications",
+          "languages",
+          "references",
+          "hobbies"
+        ],
+        [
+          "work",
+          "education",
+          "projects"
+        ]
+      ],
+      "glalie": [
+        [
+          "awards",
+          "certifications",
+          "hobbies"
+        ],
+        [
+          "objective",
+          "work",
+          "education",
+          "skills",
+          "projects",
+          "languages",
+          "references"
+        ]
+      ],
+      "onyx": [
+        [
+          "objective",
+          "education",
+          "skills",
+          "work",
+          "projects"
+        ],
+        [
+          "languages",
+          "awards",
+          "certifications",
+          "hobbies"
+        ],
+        [
+          "references"
+        ]
+      ],
+      "pikachu": [
+        [
+          "skills",
+          "languages",
+          "hobbies",
+          "awards",
+          "certifications"
+        ],
+        [
+          "work",
+          "education",
+          "projects",
+          "references"
+        ]
+      ]
+    },
+    "template": "onyx"
+  },
+
+  "preview": "",
+  "profile": {
+    "address": {
+      "city": "ChengDu",
+      "line1": "TianFu New District",
+      "pincode": 230022
+    },
+    "birthDate": "1989-02-21",
+    "email": "luoxiaobatman@gmail.com",
+    "firstName": "Ryan",
+    "heading": "Profile",
+    "lastName": "Luo",
+    "phone": "+86 13521025643",
+    "photograph": "https://firebasestorage.googleapis.com/v0/b/rx-resume.appspot.com/o/users%2FIRTkQcOPh1XoUAKIwBkf1Sh0eZj1%2Fphotographs%2F5j0xe3?alt=media&token=c1f13c4a-9bdf-4af4-9080-6e77fa6cda42",
+    "subtitle": "Java Developer"
+  },
+
+  "public": true,
+  "references": {
+    "heading": "References",
+    "items": [
+      {
+        "email": "willywonka@goldenticket.com",
+        "id": "168339fd-3c4b-4f2f-bd3a-ef184be81700",
+        "name": "Willy Wonka",
+        "phone": "+1 (802) 234-2398",
+        "position": "CEO at Chocolate Factory",
+        "summary": ""
+      },
+      {
+        "email": "elanmusk@nottesla.com",
+        "id": "350465b9-9989-43cc-b97e-4115b8980304",
+        "name": "Elangovan Musk",
+        "phone": "+91 93893 34353",
+        "position": "CEO at Newton Motors",
+        "summary": ""
+      },
+      {
+        "email": "l.beasley@carsonlogistics.com",
+        "id": "94e3447b-0a78-4fb7-b14d-591982d35320",
+        "name": "Lorraine Beasley",
+        "phone": "+1 661-808-4188",
+        "position": "Head of HR, Carson Logistics",
+        "summary": ""
+      }
+    ],
+    "visible": false
+  },
+
+  "social": {
+    "heading": "Social Network",
+    "items": [
+      {
+        "id": "a832b37d-f11d-4a80-8b4d-24796e571b17",
+        "network": "Instagram",
+        "url": "https://pillai.xyz/instagram",
+        "username": "AmruthPillai",
+        "isVisible": false
+      },
+      {
+        "id": "a72107fa-a4a5-407d-9e85-39bdb9c0b11a",
+        "network": "Twitter",
+        "url": "https://pillai.xyz/twitter",
+        "username": "KingOKings",
+        "isVisible": false
+      },
+      {
+        "id": "1dd46fdd-b3a3-4786-89ce-2e77c0823aba",
+        "network": "LinkedIn",
+        "url": "https://pillai.xyz/linkedin",
+        "username": "AmruthPillai",
+        "isVisible": false
+      }
+    ],
+    "visible": true
+  }
+
+}

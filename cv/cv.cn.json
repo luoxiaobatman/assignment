@@ -1,0 +1,399 @@
+{
+  "objective": {
+    "body": "软件工程能力, 编码能力, 长期的互联网行业积累",
+    "heading": "个人特点",
+    "visible": true
+  },
+  "work": {
+    "heading": "工作经历",
+    "items": [
+      {
+        "company": "微博, 成都研发中心",
+        "endDate": "now",
+        "position": "软件开发工程师",
+        "startDate": "2016-08-26",
+        "summary": "* 负责成都研发中心App后台架构重构和后续研发\n* 负责机器学习项目的工程部分\n* 参与绿洲App的服务端架构设计. 研发绿洲服务端部分子系统",
+        "website": "https://weibo.com"
+      },
+      {
+        "company": "魔蛋科技, 深证",
+        "endDate": "2016-01-28",
+        "position": "Web开发工程师",
+        "startDate": "2015-06-27",
+        "summary": "* 负责游戏盒子端UI研发\n* 参与盒子管理平台服务端部分子模块研发"
+      },
+      {
+        "company": "用友网络, NC, 电子销售开发部",
+        "endDate": "2015-06-20",
+        "position": "Java开发工程师",
+        "startDate": "2014-05-21",
+        "summary": "* 参与经销商门户网站服务端部分子模块研发\n* 负责落地前后端分离工程, 弃用JSP并重构前端业务",
+        "website": "https://www.yonyou.com"
+      },
+      {
+        "company": "用友软件, 用友软件工程",
+        "endDate": "2014-05-20",
+        "position": "Java初级开发工程师",
+        "startDate": "2012-09-01",
+        "summary": "* 参与超市管理平台部分子模块的研发\n* 负责驾校车载服务器的架构设计和全部子模块的研发",
+        "website": "https://www.yonyou.com"
+      }
+    ],
+    "visible": true
+  },
+  "skills": {
+    "heading": "技能",
+    "items": [
+      {
+        "isVisible": true,
+        "level": "掌握",
+        "name": "Java JVM Java生态"
+      },
+      {
+        "isVisible": true,
+        "level": "掌握",
+        "name": "设计 | 面向对象 UML 设计模式"
+      },
+      {
+        "isVisible": true,
+        "level": "掌握",
+        "name": "中间件 | Mysql Redis Kafka ES etc..."
+      },
+      {
+        "isVisible": true,
+        "level": "熟悉",
+        "name": "微服务 | 服务拆分 配置中心 服务发现 日志 监控 链路追踪 负载均衡 etc..."
+      },
+      {
+        "isVisible": true,
+        "level": "熟悉",
+        "name": "其他编程语言 | Js Python Bash"
+      },
+      {
+        "isVisible": true,
+        "level": "熟悉",
+        "name": "Devops | Shell K8S Istio Docker etc..."
+      },
+      {
+        "isVisible": true,
+        "level": "熟悉",
+        "name": "计算机 | 操作系统(Linux) 网络协议栈 算法"
+      }
+    ],
+    "visible": true
+  },
+  "projects": {
+    "heading": "项目经历",
+    "items": [
+      {
+        "startDate": "2019-02-01",
+        "endDate": "now",
+        "summary": "## 绿洲App是微博孵化的美好生活社交平台.\n\n* 参与绿洲服务端架构设计和建设\n    - 版本1.0期间, dau快速上升期间, 基础数据相关的业务拆分给微博基础架构部门\n    - 版本2.0期间, 微服务化, K8S进行容器编排, 利用K8S及其生态实现日志, 监控, 链路追踪的平台化, 实现大部分Devops相关便捷功能 \n* 分析, 设计和编码\n    - 使用UML工具画拆解需求, 产出时序图/状态迁移图/对象设计等, 然后拉通组内人员进行review, 基于此进行编码\n    - 面向对象的编码, 力求代码可读性强, 易扩展, 无状态, 易伸缩\n    - 编写Junit单元测试, 跨小组间的集成测试if possible, 保证代码质量\n* 技术栈\n    - Springboot生态\n    - Mysql, Redis, Elasticsearch, Kafka等中间件\n    - Docker容器化\n    - K8S服务伸缩, 灰度发布\n    - K8S sidecar模式(istio)日志收集, JVM性能和业务监控, 微服务链路追踪\n* 成就\n    - 完成绿洲App上线后三十万日活，百万日活等里程碑\n    - 高并发下的最终一致性的设计编码经验\n    - 微服务化积累的宝贵经验",
+        "title": "绿洲App"
+      },
+      {
+        "startDate": "2017-04-24",
+        "endDate": "2019-02-01",
+        "summary": "## 微博机器学习工程子项目\n\n* 微博图片分类工程下的数个子类图片, 打通微博app和机器学习\n* 天气通App图片天气分类工程, 输出图片天气信息给天气通app团队\n* 短视频相似BGM分类工程, 输出BGM相似短视频给短视频团队\n* 技术栈\n    - Python脚本\n    - Tensorflow\n    - Springboot生态\n    - Kafka, Redis等作为跨部门数据传输的中间件\n    - ELK日志收集和检索   \n* 成就\n    - 极大减少运营手动标注的工作量\n    - 提高App的用户体验, 增加用户使用时长",
+        "title": "机器学习"
+      },
+      {
+        "startDate": "2016-08-26",
+        "endDate": "2017-04-24",
+        "summary": "## 微博成都研发中心工作后台\n\n* 重构工作后台UI全部历史代码\n    - 落地前后端分离的思想\n    - 使用Reactjs框架, 引入工作后台最佳实践\n* 技术栈\n    - Springboot生态\n    - Mysql, Redis, Docker\n    - Nodejs, React, Redux, Ant Design, React Saga, Webpack\n* 成就\n    - 重构历史代码\n    - 落地并分享新技术, 极大提高团队编码效率",
+        "title": "微博成研工作后台"
+      },
+      {
+        "startDate": "2015-06-27",
+        "endDate": "2016-01-28",
+        "summary": "## 魔蛋游戏盒子服务端\n\n* 负责项目所有UI界面相关的业务\n    - 盒子端: 账号子模块UI, 商店子模块, 反馈UI, 社交子模块UI \n    - 管理后台端: 权限模块, 运营人员管理, 游戏玩家管理, 商品管理\n* 技术栈\n    - Nodejs, Expressjs\n    - Reactjs, Ant Design, Webpack",
+        "title": "魔蛋游戏盒子"
+      },
+      {
+        "startDate": "2014-05-13",
+        "endDate": "2015-06-15",
+        "summary": "## NC经销商门户网站\n\n* 我做的工作\n    - 管理3人的UI团队, 调研分享落地新技术(React生态), 自建内部UI\n    - 编写经销商组织关系部分代码\n    - 统计经销商收支, 生成报表\n* 新工具的引入和分享\n    - 调研分享并落地Reactjs, 弃用JSP技术, 分离了前后端, 重构了历史代码\n    - 基于Reactjs做了一套简易满足门户网站的UI内部组件\n* 技术栈\n    - SpringMVC Hibernate Struts Mysql \n    - Reactjs\n* 成就\n    - 落地前后端分离思想, 提升团队效率",
+        "title": "NC经销商门户"
+      },
+      {
+        "startDate": "2013-03-28",
+        "endDate": "2014-05-17",
+        "summary": "## 驾校车载app的服务端\n\n* 业务模块\n    - 编写学员指纹管理子模块CRUD业务\n    - 编写学员管理子模块CRUD业务\n    - 编写学员考勤, 教练考勤子模块CRUD业务\n    - 编写教练奖励机制子模块相关业务\n    - 编写驾校日常活动子模块, 并输出活动收支报表\n* 技术栈\n    - SpringMVC Hibernate Struts Mysql",
+        "title": "驾校车载app服务端"
+      },
+      {
+        "startDate": "2012-08-25",
+        "endDate": "2013-03-20",
+        "summary": "## 超市管理平台\n\n* 负责业务模块\n    - 编写商户组织关系相关代码\n    - 编写员工关系相关代码\n    - 编写超市日常发布活动, 并输出活动相关报表\n    - 编写超市财务收益相关代码\n* 技术栈\n    - SpringMVC Hibernate Struts Mysql",
+        "title": "超市管理平台服务端"
+      }
+    ],
+    "visible": true
+  },
+  "awards": {
+    "heading": "奖项",
+    "items": [
+      {
+        "awarder": "用友",
+        "date": "2014-12-13",
+        "id": "",
+        "summary": "",
+        "title": "用友集团优秀新人"
+      },
+      {
+        "awarder": "微博",
+        "date": "2017-12-01",
+        "id": "",
+        "summary": "",
+        "title": "微博微创新优秀作品"
+      },
+      {
+        "awarder": "微博",
+        "date": "2020-01-15",
+        "id": "",
+        "summary": "",
+        "title": "新浪集团年度团队"
+      }
+    ],
+    "visible": true
+  },
+  "certifications": {
+    "heading": "证书",
+    "items": [
+      {
+        "date": "2012-07-01",
+        "issuer": "中国科学技术大学",
+        "summary": "",
+        "title": "毕业证书"
+      },
+      {
+        "date": "2012-07-01",
+        "issuer": "中国科学技术大学",
+        "summary": "",
+        "title": "学士学位证书"
+      }
+    ],
+    "visible": true
+  },
+  "education": {
+    "heading": "教育背景",
+    "items": [
+      {
+        "degree": "本科",
+        "startDate": "2007-09-01",
+        "endDate": "2012-08-01",
+        "field": "数学统计",
+        "institution": "中国科学技术大学",
+        "summary": ""
+      }
+    ],
+    "visible": true
+  },
+  "hobbies": {
+    "heading": "爱好",
+    "items": [
+      {
+        "name": "工程"
+      },
+      {
+        "name": "阅读"
+      },
+      {
+        "name": "科技"
+      },
+      {
+        "name": "足球"
+      },
+      {
+        "name": "DIY改装建造"
+      },
+      {
+        "name": "生存"
+      }
+    ],
+    "visible": true
+  },
+  "languages": {
+    "heading": "语言",
+    "items": [
+      {
+        "fluency": "母语",
+        "name": "汉语"
+      },
+      {
+        "fluency": "读写听Native, 说Beginner",
+        "name": "英语"
+      }
+    ],
+    "visible": true
+  },
+  "metadata": {
+    "colors": {
+      "background": "#FFFFFF",
+      "primary": "#4CAF50",
+      "text": "#212121"
+    },
+    "font": "Titillium Web",
+    "fontSize": "10",
+    "language": "zh",
+    "layout": {
+      "castform": [
+        [
+          "awards",
+          "certifications",
+          "languages",
+          "hobbies"
+        ],
+        [
+          "objective",
+          "work",
+          "education",
+          "skills",
+          "projects",
+          "references"
+        ]
+      ],
+      "celebi": [
+        [
+          "awards",
+          "certifications",
+          "languages",
+          "hobbies"
+        ],
+        [
+          "objective",
+          "work",
+          "education",
+          "skills",
+          "projects",
+          "references"
+        ]
+      ],
+      "gengar": [
+        [
+          "objective",
+          "skills"
+        ],
+        [
+          "awards",
+          "certifications",
+          "languages",
+          "references",
+          "hobbies"
+        ],
+        [
+          "work",
+          "education",
+          "projects"
+        ]
+      ],
+      "glalie": [
+        [
+          "awards",
+          "certifications",
+          "hobbies"
+        ],
+        [
+          "objective",
+          "work",
+          "education",
+          "skills",
+          "projects",
+          "languages",
+          "references"
+        ]
+      ],
+      "onyx": [
+        [
+          "objective",
+          "education",
+          "skills",
+          "work",
+          "projects"
+        ],
+        [
+          "languages",
+          "awards",
+          "certifications",
+          "hobbies"
+        ],
+        [
+          "references"
+        ]
+      ],
+      "pikachu": [
+        [
+          "skills",
+          "languages",
+          "hobbies",
+          "awards",
+          "certifications"
+        ],
+        [
+          "work",
+          "education",
+          "projects",
+          "references"
+        ]
+      ]
+    },
+    "template": "onyx"
+  },
+  "preview": "",
+  "profile": {
+    "address": {
+      "city": "成都",
+      "line1": "天府新区-华阳",
+      "pincode": 230022
+    },
+    "birthDate": "1989-02-21",
+    "email": "luoxiaobatman@gmail.com",
+    "firstName": "罗",
+    "heading": "简介",
+    "lastName": "潇",
+    "phone": "+86 13521025643",
+    "photograph": "https://firebasestorage.googleapis.com/v0/b/rx-resume.appspot.com/o/users%2FIRTkQcOPh1XoUAKIwBkf1Sh0eZj1%2Fphotographs%2F5j0xe3?alt=media&token=c1f13c4a-9bdf-4af4-9080-6e77fa6cda42",
+    "subtitle": "Java软件开发工程师(期望薪资25K/月, 年包350K)"
+  },
+  "public": true,
+  "references": {
+    "heading": "参考",
+    "items": [
+      {
+        "email": "",
+        "name": "",
+        "phone": "",
+        "position": "",
+        "summary": ""
+      }
+    ],
+    "visible": false
+  },
+  "social": {
+    "heading": "社交网络",
+    "items": [
+      {
+        "id": "a832b37d-f11d-4a80-8b4d-24796e571b17",
+        "network": "Instagram",
+        "url": "https://pillai.xyz/instagram",
+        "username": "AmruthPillai",
+        "isVisible": false
+      },
+      {
+        "id": "a72107fa-a4a5-407d-9e85-39bdb9c0b11a",
+        "network": "Twitter",
+        "url": "https://pillai.xyz/twitter",
+        "username": "KingOKings",
+        "isVisible": false
+      },
+      {
+        "id": "1dd46fdd-b3a3-4786-89ce-2e77c0823aba",
+        "network": "LinkedIn",
+        "url": "https://pillai.xyz/linkedin",
+        "username": "AmruthPillai",
+        "isVisible": false
+      }
+    ],
+    "visible": false
+  }
+}
