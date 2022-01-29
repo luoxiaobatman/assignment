@@ -4,8 +4,7 @@ import java.util.AbstractList;
 import java.util.List;
 
 /**
- * 线程安全
- * 性能低
+ * 练习链表
  *
  * @param <T> 元素类型
  */

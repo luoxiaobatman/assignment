@@ -1,6 +1,5 @@
 package com.luoxiaobatman.assignment.datastructure.stack;
 
-import com.luoxiaobatman.assignment.datastructure.list.LinkedList;
 import com.luoxiaobatman.assignment.support.IntArgumentsParser;
 import com.luoxiaobatman.assignment.support.IntsArgumentsParser;
 import com.luoxiaobatman.assignment.support.SolutionSource;
@@ -26,21 +25,21 @@ class ArrayMonoStackTest {
         }
     }
 
-    private Stack<Animal> animals;
+    private Stack<Animal> animalsSpeed;
 
     @BeforeEach
     void setup() {
-        animals = new ArrayMonoStack<>(true, 2);
+        animalsSpeed = new ArrayMonoStack<>(true, 2);
     }
 
     @Test
     void testPush() {
         Animal monkey = new Animal(2);
-        animals.push(monkey);
-        assertEquals(animals.size(), 1);
+        animalsSpeed.push(monkey);
+        assertEquals(animalsSpeed.size(), 1);
         Animal horse = new Animal(3);
-        animals.push(horse);
-        assertEquals(animals.size(), 2);
+        animalsSpeed.push(horse);
+        assertEquals(animalsSpeed.size(), 2);
     }
 
     @ParameterizedTest
@@ -55,14 +54,14 @@ class ArrayMonoStackTest {
             argumentsParsers = {IntsArgumentsParser.class, IntArgumentsParser.class, IntsArgumentsParser.class}
     )
     void testMono(int[] speeds, int size, int[] expected) {
-        animals = new ArrayMonoStack<>(true, size);
+        animalsSpeed = new ArrayMonoStack<>(true, size);
         Arrays.stream(speeds).mapToObj(Animal::new).forEach(animal -> {
-            animals.push(animal);
+            animalsSpeed.push(animal);
         });
         List<Animal> monod = new ArrayList<>();
         try {
             while (true) {
-                monod.add(0, animals.pop());
+                monod.add(0, animalsSpeed.pop());
             }
         } catch (IndexOutOfBoundsException ignored) {}
         assertEquals(monod.size(), expected.length);
@@ -71,26 +70,4 @@ class ArrayMonoStackTest {
         }
     }
 
-//    @Test
-//    void testPop() {
-//        Object monkey = new Object();
-//        animals.push(monkey);
-//        Object horse = new Object();
-//        animals.push(horse);
-//
-//        assertSame(animals.pop(), horse);
-//        assertEquals(animals.size(), 1);
-//        assertSame(animals.pop(), monkey);
-//        assertEquals(animals.size(), 0);
-//        assertThrows(IndexOutOfBoundsException.class, () -> animals.pop());
-//    }
-//
-//    @Test
-//    void testPeek() {
-//        assertThrows(IndexOutOfBoundsException.class, () -> animals.peek());
-//        Object monkey = new Object();
-//        animals.push(monkey);
-//        assertSame(animals.peek(), monkey);
-//        assertEquals(animals.size(), 1);
-//    }
 }
