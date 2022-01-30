@@ -6,6 +6,11 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
+/**
+ * 此类方便leetcode来回拷贝
+ * <p>
+ * ignore this class!!!
+ */
 public class Template {
     public interface Visitor {
         /**
