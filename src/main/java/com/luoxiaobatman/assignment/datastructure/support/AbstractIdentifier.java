@@ -1,6 +1,14 @@
 package com.luoxiaobatman.assignment.datastructure.support;
 
 public abstract class AbstractIdentifier implements Identifier {
+    private Object mark;
+
+    public Object mark() {
+        return mark;
+    }
+    public void mark(Object m) {
+        this.mark = m;
+    }
 
     @Override
     public boolean equals(Object obj) {

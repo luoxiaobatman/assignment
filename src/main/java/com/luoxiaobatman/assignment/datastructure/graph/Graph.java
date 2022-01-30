@@ -1,14 +1,15 @@
-package com.luoxiaobatman.assignment.datastructure.graph.adjacentlist;
+package com.luoxiaobatman.assignment.datastructure.graph;
 
+import com.luoxiaobatman.assignment.datastructure.graph.adjacentlist.Node;
 import com.luoxiaobatman.assignment.datastructure.support.Identifier;
 import com.luoxiaobatman.assignment.datastructure.support.OrderedPair;
 
+import java.util.Map;
+import java.util.Set;
 import java.util.function.Consumer;
 
 /**
- * 练习 图
- * <p>
- * adjacent list representation
+ * 练习画图
  */
 public interface Graph {
     /**
@@ -38,6 +39,8 @@ public interface Graph {
      * @param identifierOrderedPair ...
      */
     void disconnect(OrderedPair<Identifier> identifierOrderedPair);
+
+    Map<Identifier, Node> getNodes();
 
     void dfs(Consumer<Identifier> consumer);
 

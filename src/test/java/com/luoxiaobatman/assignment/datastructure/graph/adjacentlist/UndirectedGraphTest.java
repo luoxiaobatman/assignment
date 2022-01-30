@@ -1,8 +1,7 @@
 package com.luoxiaobatman.assignment.datastructure.graph.adjacentlist;
 
+import com.luoxiaobatman.assignment.datastructure.graph.Graph;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UndirectedGraphTest {
 

@@ -11,4 +11,7 @@ public interface Identifier {
     int hashCode();
 
     String toString();
+
+    Object mark();
+    void mark(Object mark);
 }

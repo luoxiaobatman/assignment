@@ -1,12 +1,15 @@
 package com.luoxiaobatman.assignment.datastructure.graph.adjacentlist;
 
+import com.luoxiaobatman.assignment.datastructure.graph.Graph;
+import com.luoxiaobatman.assignment.datastructure.graph.GraphVisitor;
 import com.luoxiaobatman.assignment.datastructure.support.Identifier;
 import com.luoxiaobatman.assignment.datastructure.support.OrderedPair;
+import com.luoxiaobatman.assignment.designpattern.behavior.vistor.Visitor;
 
 import java.util.*;
 import java.util.function.Consumer;
 
-public abstract class AbstractGraph implements Graph {
+public abstract class AbstractGraph implements Graph, Consumer<Visitor> {
     protected final Map<Identifier, Node> nodes = new HashMap<>();
 
     @Override
@@ -52,6 +55,18 @@ public abstract class AbstractGraph implements Graph {
     public void disconnect(OrderedPair<Identifier> identifierOrderedPair) {
         nodes.get(identifierOrderedPair.white).disconnect(identifierOrderedPair.black);
         nodes.get(identifierOrderedPair.black).disconnect(identifierOrderedPair.white);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        if (visitor instanceof GraphVisitor) {
+            visitor.visit(this);
+        }
+    }
+
+    @Override
+    public Map<Identifier, Node> getNodes() {
+        return nodes;
     }
 
     @Override

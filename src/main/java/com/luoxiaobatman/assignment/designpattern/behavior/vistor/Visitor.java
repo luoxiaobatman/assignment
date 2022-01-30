@@ -22,7 +22,7 @@ import java.util.function.Consumer;
  *     <li>元素对访问者公布了细节</li>
  * </ul>
  */
-interface Visitor {
+public interface Visitor {
     /**
      * 访问者
      *
