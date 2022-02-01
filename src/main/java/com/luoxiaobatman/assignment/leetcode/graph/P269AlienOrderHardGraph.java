@@ -1,22 +1,16 @@
 package com.luoxiaobatman.assignment.leetcode.graph;
 
-import com.luoxiaobatman.assignment.datastructure.graph.GraphVisitor;
 import com.luoxiaobatman.assignment.datastructure.graph.TopologySort;
 import com.luoxiaobatman.assignment.datastructure.graph.adjacentlist.DirectedGraph;
 import com.luoxiaobatman.assignment.datastructure.graph.Graph;
-import com.luoxiaobatman.assignment.datastructure.graph.adjacentlist.Node;
 import com.luoxiaobatman.assignment.datastructure.support.CharacterIdentifier;
 import com.luoxiaobatman.assignment.datastructure.support.Identifier;
 import com.luoxiaobatman.assignment.datastructure.support.OrderedPair;
-import com.luoxiaobatman.assignment.designpattern.behavior.vistor.Visitor;
 import com.luoxiaobatman.assignment.support.solution.AbstractSolution;
 import com.luoxiaobatman.assignment.support.solution.GenericSolution;
-import com.luoxiaobatman.assignment.support.solution.Solver;
 import lombok.AllArgsConstructor;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 /**
  * 图 拓扑排序

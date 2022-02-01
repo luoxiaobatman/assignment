@@ -1,5 +1,6 @@
 package com.luoxiaobatman.assignment.datastructure.graph.adjacentlist;
 
+import com.luoxiaobatman.assignment.datastructure.support.EdgeImpl;
 import com.luoxiaobatman.assignment.datastructure.support.Identifier;
 import com.luoxiaobatman.assignment.datastructure.support.OrderedPair;
 import com.luoxiaobatman.assignment.datastructure.support.StringIdentifier;

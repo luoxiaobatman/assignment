@@ -10,7 +10,14 @@ public final class OrderedPair<E> {
         this.white = white;
     }
 
+    /**
+     * 白子是起
+     */
     public final E white;
+
+    /**
+     * 黑子为终
+     */
     public final E black;
 
     public E viceVersa(E vice) {

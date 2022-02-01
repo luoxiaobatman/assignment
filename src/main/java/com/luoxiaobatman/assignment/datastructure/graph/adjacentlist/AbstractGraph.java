@@ -2,7 +2,9 @@ package com.luoxiaobatman.assignment.datastructure.graph.adjacentlist;
 
 import com.luoxiaobatman.assignment.datastructure.graph.Graph;
 import com.luoxiaobatman.assignment.datastructure.graph.GraphVisitor;
+import com.luoxiaobatman.assignment.datastructure.support.Edge;
 import com.luoxiaobatman.assignment.datastructure.support.Identifier;
+import com.luoxiaobatman.assignment.datastructure.support.Node;
 import com.luoxiaobatman.assignment.datastructure.support.OrderedPair;
 import com.luoxiaobatman.assignment.designpattern.behavior.vistor.Visitor;
 
@@ -15,12 +17,12 @@ public abstract class AbstractGraph implements Graph, Consumer<Visitor> {
     @Override
     public void put(Identifier nodeIdentifier) {
         remove(nodeIdentifier);
-        nodes.put(nodeIdentifier, new StandardNode(nodeIdentifier));
+        nodes.put(nodeIdentifier, new GraphNode(nodeIdentifier));
     }
 
     @Override
     public Identifier putIfAbsent(Identifier nodeIdentifier) {
-        Node existedNode = nodes.putIfAbsent(nodeIdentifier, new StandardNode(nodeIdentifier));
+        Node existedNode = nodes.putIfAbsent(nodeIdentifier, new GraphNode(nodeIdentifier));
         if (existedNode == null) {
             return null;
         }
@@ -67,41 +69,5 @@ public abstract class AbstractGraph implements Graph, Consumer<Visitor> {
     @Override
     public Map<Identifier, Node> getNodes() {
         return nodes;
-    }
-
-    @Override
-    public void dfs(Consumer<Identifier> consumer) {
-    }
-
-    @Override
-    public void bfs(Consumer<Identifier> consumer) {
-        Collection<Node> values = nodes.values();
-        if (values.isEmpty()) return;
-
-        Queue<Identifier> waiting = new LinkedList<>();
-        Set<Identifier> seen = new HashSet<>();
-
-        for (Node node : values) {
-            waiting.offer(node.getIdentifier());
-            while (!waiting.isEmpty()) {
-                Identifier hit = waiting.poll();
-                if (seen.contains(hit)) continue;
-                consumer.accept(hit);
-                for (Identifier next: nodes.get(hit).adjacent()) {
-                    waiting.offer(next);
-                }
-                seen.add(hit);
-            }
-        }
-    }
-
-    @Override
-    public void dfs(Consumer<Identifier> consumer, Identifier start) {
-
-    }
-
-    @Override
-    public void bfs(Consumer<Identifier> consumer, Identifier start) {
-
     }
 }
