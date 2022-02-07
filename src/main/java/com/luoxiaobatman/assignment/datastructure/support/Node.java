@@ -1,5 +1,6 @@
 package com.luoxiaobatman.assignment.datastructure.support;
 
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -31,4 +32,6 @@ public interface Node {
      * @return 图中的节点标识
      */
     Set<Identifier> adjacent();
+
+    Map<Identifier, Edge> edges();
 }

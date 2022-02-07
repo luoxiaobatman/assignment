@@ -48,4 +48,9 @@ public abstract class AbstractNode implements Node {
     public int hashCode() {
         return identifier.id().hashCode();
     }
+
+    @Override
+    public Map<Identifier, Edge> edges() {
+        return edges;
+    }
 }

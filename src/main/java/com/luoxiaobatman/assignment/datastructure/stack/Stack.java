@@ -1,8 +1,10 @@
 package com.luoxiaobatman.assignment.datastructure.stack;
 
 /**
- * TODO queues, binary trees, graphs, hash tables
+ * 用Deque接口
+ *
  * @param <E> 栈元素类型
+ * @see java.util.Deque
  */
 public interface Stack<E> {
     E peek();

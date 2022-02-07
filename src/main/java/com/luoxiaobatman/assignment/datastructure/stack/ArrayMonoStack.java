@@ -1,13 +1,16 @@
 package com.luoxiaobatman.assignment.datastructure.stack;
 
 /**
- * 单调栈
+ * 单调栈(并不是), 总数和最大
+ * <p>
+ * 栈里面的数字的和最大
  *
  * @see com.luoxiaobatman.assignment.leetcode.greedy.P321HardFaster
  */
 public class ArrayMonoStack<E extends Comparable<E>> extends ArrayStack<E> implements Stack<E> {
     private boolean inc;
     private int size;
+
     public ArrayMonoStack(boolean inc, int size) {
         super();
         this.inc = inc;
@@ -27,14 +30,14 @@ public class ArrayMonoStack<E extends Comparable<E>> extends ArrayStack<E> imple
         int order;
         for (int i = 0; i < size - 1; i++) {
             order = get(i).compareTo(get(i + 1));
-            if ((inc && order < 0) || (!inc && order > 0 )) {
+            if ((inc && order < 0) || (!inc && order > 0)) {
                 remove(i);
                 add(e);
                 return;
             }
         }
-        order = get(size -1).compareTo(e);
-        if ((inc && order < 0) || (!inc && order > 0 )) {
+        order = get(size - 1).compareTo(e);
+        if ((inc && order < 0) || (!inc && order > 0)) {
             remove(size - 1);
             add(e);
         }

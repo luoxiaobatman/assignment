@@ -42,7 +42,6 @@ public class TopologySort extends GraphVisitor<List<Identifier>> {
                 topologySort(graph, identifier);
             }
         }
-        System.out.println(sorted);
     }
 
 
