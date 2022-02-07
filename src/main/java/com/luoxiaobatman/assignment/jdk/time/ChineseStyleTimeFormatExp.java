@@ -20,3 +20,4 @@ public class ChineseStyleTimeFormatExp extends AbstractSolution<String> implemen
         return FORMATTER.format(accessor);
     }
 }
+

@@ -1,6 +1,6 @@
 {
   "objective": {
-    "body": "Recognizable Software Engineer Skill, Recognizable Coding Skill, 9-Year Java Coding Experience, No issue Against Pushing",
+    "body": "Recognizable Software Engineer Skill, Recognizable Coding Skill, 9-Year Java Coding Experience.",
     "heading": "Traits",
     "visible": true
   },
@@ -8,26 +8,23 @@
     "heading": "Work Experience",
     "items": [
       {
-        "company": "Sina Weibo, Chengdu Dev Center, Chengdu",
+        "company": "Sina Weibo, Chengdu R&D, Chengdu",
         "position": "Software engineer",
         "endDate": "now",
         "startDate": "2016-08-26",
-        "summary": "* In charge of ChengDu dev center supporting platform.\n* In charge of engineer part(vs. algorithm part) of machine learning projects\n* Part of oasis app server side architect team. Design and code various sub systems",
         "website": "https://weibo.com"
       },
       {
         "company": "Modan, ShenZhen",
         "endDate": "2016-01-28",
         "position": "Web Developer",
-        "startDate": "2015-06-27",
-        "summary": "Gaming-box UI and server side management system."
+        "startDate": "2015-06-27"
       },
       {
-        "company": "Yonyou NC Sales EC Department, Beijing",
+        "company": "Yonyou NC EC Department, Beijing",
         "endDate": "2015-06-20",
         "position": "Java Developer",
         "startDate": "2014-05-21",
-        "summary": "Seller's website, abandon JSP tech, separating frontend and backend",
         "website": "https://www.yonyou.com"
       },
       {
@@ -35,7 +32,6 @@
         "endDate": "2014-05-20",
         "position": "Junior Java Developer",
         "startDate": "2012-09-01",
-        "summary": "Supermarket management server side coding. Driver school management server side architect design and modules coding.",
         "website": "https://www.yonyou.com"
       }
     ],
@@ -88,44 +84,44 @@
       {
         "startDate": "2019-02-01",
         "endDate": "now",
-        "summary": "## OasisApp incubates from Weibo, a inns like app.\n\n* We worked all the way from 0 to 1 million dau.\n* Lead Architect Design\n    - Sep code across all departments when dau surge on first launch\n    - Refactor using microservice approach after version 2.0 \n    - Using K8S to Orchestrate all our springboot services\n* Analyse, Design and Coding\n    - Analyse requirements, using UML tools(drawio in my case) to make everything crystal clear, then review the cases inside our team\n    - Coding using OOP approach, design pattern. Writing readable, distributable, scalable codes\n    - We Write Junit test cases when possible, and writes integration test cases when the time is feasible, and keeps codes quality high\n* Tech stack\n    - Springboot\n    - Middlewares: Mysql, Redis, Elasticsearch, Kafka\n    - Docker Container\n    - k8s sidecar mode(We using istio) to make services and its runtimes(which in our case JVM and the docker container) observable.\n    - Using K8S to make our app scalable, gray scale release possible\n* Achievements\n    - From 0 to 300K Dau, from 300K Dau to 1M Dau\n    - Eventually Consistency in High concurrency scenes\n    - App goes from monoservice to microservice, and the experience gained from making that happen is highly valuable and recognizable",
-        "title": "App Oasis"
+        "summary": "* About the app\n    - Ins-like image-based content distribution software, users share and consume images on the app.\n    - Users can interact with the content (refer to, comments, likes), and can interact with other users (mutual fans, private chats or through water drops (a currency of Oasis app))\n    - Users can get water drops (a currency of the Oasis app) when using Oasis products.\n    - Oasis and Weibo are connected, dynamic exchanges their contents.\n    - The estimated carrying capacity of the project was 300K DAU, which was changed to 10M DAU at the initial stage of the official launch.\n* Participate in the design and construction of the server architecture\n    - Server version 1.0 app dau rises rapidly, and we went to microservice by splitting codes across departments and teams. \n    - Server version 2.0 we adopt K8S, using it and its ecology to realize the platformization of logging, monitoring, and link tracking, and realizes convenient functions related to Devops.\n* Duty of Analyzing, designing and coding\n    - Responsible for main status publisher, main feed stream, user-defined data, intercommunication with Weibo and other related businesses.\n    - Use UML tools to disassemble and refine requirements, produce sequence diagrams, state diagrams and object designs, etc., and then pull in the team to review and code based on this.\n    - Object-oriented coding, striving for code readability, easy to expand, easy to scale\n    - Write Junit unit tests, integration tests across teams/departments if possible, to ensure delivery quality.\n* Technology stack\n    - Springboot and its eco-system.\n    - Internet middleware such as Mysql, Redis, Kafka, Elasticsearch, etc.\n    - Docker containerization.\n    - K8S service scaling, grayscale publishing, sidecar mode (istio) log collection, JVM performance and business monitoring, microservice link tracking.\n* Achievement\n    - Completed milestones such as 30K DAUs and 1M DAUs.\n    - Eventual consistent design and coding experience for millions of daily active products.\n    - Experience accumulated in microservices",
+        "title": "Oasis app"
       },
       {
         "startDate": "2017-04-24",
         "endDate": "2019-02-01",
-        "summary": "## Weibo machine learning sub-projects\n\n* Weibo Images Categorizing - sub category project\n* Categorize Weather Images for Weibo weather app. \n* Categorize similar background music.\n* Tech stack\n    - Python\n    - Tensorflow\n    - Springboot\n    - Using Kafka, Redis to push and pull data across teams\n    - ELK to collects logs  \n* Achievements\n    - Reduce works done by manually categorize images, boost efficiency.\n    - Boost Weibo weather app user experience and our user spend more time on our app",
-        "title": "Machine Learning"
+        "summary": "* Responsible for three engineering projects\n    - Weibo picture classification\n       - Using the Tensorflow framework for training and classifying, and the images were tagged and sent to the Weibo app team for subsequent use.\n    - Weather image classification\n       - Train and classify weather pictures (cloudy, sunny, rainy, snow, etc.), tag the pictures and send them to the weather app team for subsequent use.\n    - Similar music Recognition\n       - Find the short video containing the music, tag it and send it to short video app team for subsequent use.\n* Technology stack\n    - Python scripting\n    - Tensorflow\n    - Springboot and its eco-system\n    - Kafka, Redis, etc. as middleware for cross-departmental data transmission\n* Achievement\n    - Greatly reduce the workload of manual labeling operations.\n    - Improve the user experience of the App and increase the user's usage time.",
+        "title": "Machine learning"
       },
       {
         "startDate": "2016-08-26",
         "endDate": "2017-04-24",
-        "summary": "## Chengdu dev center supporting platform\n\n* Refactor all the codes.\n    - Frontend and Backend separation.\n    - Using reactjs framework, and its best practices\n* Tech stack\n    - Springboot\n    - Mysql, Redis, Docker\n    - React, Redux, Ant Design, React Saga, Webpack\n* Achievements\n    - Refactored 100K+ lines code, made use technology possible for our team, boost coding efficiency \n    - Share the experience about refactoring and why we did it.\n",
-        "title": "Supporting Center For Weibo Chengdu"
+        "summary": "* About the supporting platform\n    - Management + Operation All apps approved by Chengdu R&D Center\n    - Including 鲜城(2014-16) 随手拍(15-17) 爱动(17-19) 绿洲(19-now)\n* Reconstruct the entire historical code of the supporting platform built during the years 14-15.\n    - Realize front and back end separation.\n    - Using the Reactjs framework, introducing best practices.\n* Technology stack\n    - Springboot\n    - Mysql, Redis, Docker\n    - Nodejs, React, Redux, Ant Design, React Saga, Webpack\n* Achievement\n    - Refactoring the historical code to greatly improve the development efficiency of the team.\n    - Implement and share new technologies to broaden the team's vision.\n",
+        "title": "App supporting platform"
       },
       {
         "startDate": "2015-06-27",
         "endDate": "2016-01-28",
-        "summary": "## Modan Gaming-Box Serverside Programming\n\n* All the UI related works\n    - gaming-box side: account management, shop, feedback and social UI \n    - management side: Permission System, Operator Management, Player Management, Shop Management\n* Tech Stack\n    - Nodejs, Expressjs\n    - Reactjs, Ant Design, Webpack",
-        "title": "Modan Gaming Center Platform"
+        "summary": "* About Modan\n    - Imitation ps, xbox. Based on Android operating system, the box is connected to the TV, and users play paid/free games on it.\n    - The operation interface of the box is using web technology. It interacts with the server to realize the account system and pay-to-play process.\n* Responsible for all UI interface\n    - Gaming-Box side: account UI, store UI, feedback UI, social-related UI etc.\n    - Management side: account UI, operator management UI, game player management UI etc.\n* Technology stack\n    - Nodejs, Expressjs\n    - Reactjs, Ant Design, Webpack\n    ",
+        "title": "Modan gaming platform"
       },
       {
         "startDate": "2014-05-13",
         "endDate": "2015-06-15",
-        "summary": "## Sales Website\n\n* What have I done?\n    - I lead a web team with 3 person. We dug new Technology and shared across team. We coded UI framework which our website used.\n    - Code seller's organization related business logic.\n    - Coded Sellers income and expenditure chart&report.\n* Share new tech\n    - Shared Reactjs, and used it in our project, abandon JSP, separated frontend and backend.\n    - Coded UI components based on Reactjs.\n* Tech stack\n    - SpringMVC Hibernate Struts Mysql \n* Achievements\n    - Made Separating frontend and backend happen",
-        "title": "NC Seller's Website"
+        "summary": "* About the website\n    - E-commerce website for large-scale procurement between enterprises.\n* What I did\n    - Code the Reseller Organization Relations section\n    - Statistical sales and expenditures of dealers, generate reports\n    - Introduction and sharing of new tools\n* new tools\n    - Investigate, share, realize Reactjs, abandon JSP technology, separate front and back ends, and reconstruct historical code.\n    - Based on Reactjs, we made a set of UI internal components that simply satisfy the portal website.\n    - Assign requirements to a 3-person team and review the code.\n* Technology stack\n    - SpringMVC Hibernate Struts Mysql \n    - Reactjs\n* Achievements\n    - Separation of front-end and back-end to improve team efficiency.",
+        "title": "NC Dealer Portal"
       },
       {
         "startDate": "2013-03-28",
         "endDate": "2014-05-17",
-        "summary": "## Driver school app server side\n\n* Works I have done\n    - Students fingerprints module CRUD.\n    - Students management module CRUD\n    - Student and teacher daily routine checking, report their daily performance.\n* Tech stack\n    - SpringMVC Hibernate Struts Mysql",
-        "title": "Driving School App's Backend(Outsourcing)"
+        "summary": "* About the app\n    - A tool for driving school to check attendance of students/instructors.\n    - Based on attendance and student evaluation, form the basis for coach assessment.\n    - Assist in managing the daily activities of the driving school\n* What I did\n    - Code the business of the student fingerprint management.\n    - Code student management business.\n    - Code student attendance, coach attendance business.\n    - Code coach reward business.\n    - Code the daily activities business of the driving school, and output the activity income and expenditure report.\n* Technology stack\n    - SpringMVC Hibernate Struts Mysql",
+        "title": "Driving school app"
       },
       {
         "startDate": "2012-08-25",
         "endDate": "2013-03-20",
-        "summary": "## Supermarket management server side\n\n* Works I have done\n    - Coding supermarket's and business unit relationship module.\n    - Coding staff management module.\n    - Coding about publishing Daily activities and gathering its revenue daily, monthly and yearly. \n    - Coding supermarket finance module.\n* Tech stack\n    - SpringMVC Hibernate Struts Mysql",
-        "title": "Supermarket Website Backend"
+        "summary": "* About\n    - Like erp system for supermarket\n* What I did\n    - Code merchant organization relationship business.\n    - Code supermarket's staff organization business. \n    - Code supermarket's daily activities, and report its income and expenditure.\n    - Code supermarket financial income related code.\n* Technology stack\n    - SpringMVC Hibernate Struts Mysql",
+        "title": "Supermarket management platform"
       }
     ],
     "visible": true
@@ -164,13 +160,13 @@
         "date": "2012-07-01",
         "issuer": "USTC",
         "summary": "",
-        "title": "Diploma of University of Science And Technology of China"
+        "title": "Diploma"
       },
       {
         "date": "2012-07-01",
         "issuer": "USTC",
         "summary": "",
-        "title": "Bachelor's Degree of University of Science And Technology of China"
+        "title": "Bachelor's Degree"
       }
     ],
     "visible": true
@@ -222,7 +218,7 @@
         "name": "Mandarin"
       },
       {
-        "fluency": "Read&Write&Listen like natives. Speak just like a beginner",
+        "fluency": "Good",
         "name": "English"
       }
     ],
