@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * 练习链表
  *
+ * TODO luoxiao 循环链表 双链 跳表
+ *
  * @param <T> 元素类型
  */
 public class LinkedList<T> extends AbstractList<T> implements List<T> {

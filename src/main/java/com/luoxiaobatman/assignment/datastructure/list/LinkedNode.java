@@ -1,4 +1,4 @@
-package com.luoxiaobatman.assignment.datastructure;
+package com.luoxiaobatman.assignment.datastructure.list;
 
 import lombok.Data;
 

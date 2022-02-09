@@ -1,6 +1,6 @@
 package com.luoxiaobatman.assignment.leetcode.trivial;
 
-import com.luoxiaobatman.assignment.datastructure.DoubleLinkedNode;
+import com.luoxiaobatman.assignment.datastructure.list.DoubleLinkedNode;
 import com.luoxiaobatman.assignment.solution.Answer;
 import com.luoxiaobatman.assignment.solution.Solution;
 import com.luoxiaobatman.assignment.support.Factory;
