@@ -4,10 +4,18 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class IntegersArgumentsParser implements ArgumentsParser<Integer[]>{
+//    static {
+//        SolutionArgumentsProvider.register(Integer[].class, new IntegersArgumentsParser(","));
+//    }
+
     private final String delimiter;
 
     @Override
     public Integer[] parse(String argument) {
+        if ("".equals(argument)) {
+            return new Integer[0];
+        }
+
         String[] splitArguments = argument.split(delimiter);
 
         Integer[] result = new Integer[splitArguments.length];

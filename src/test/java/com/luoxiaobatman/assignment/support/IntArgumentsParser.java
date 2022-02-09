@@ -7,10 +7,9 @@ import java.util.Arrays;
 
 @AllArgsConstructor
 public class IntArgumentsParser implements ArgumentsParser<Integer>{
-    /**
-     * eh...
-     */
-    private String delimiter;
+//    static {
+//        SolutionArgumentsProvider.register(Integer.class, new IntArgumentsParser());
+//    }
 
     @Override
     public Integer parse(String argument) {
