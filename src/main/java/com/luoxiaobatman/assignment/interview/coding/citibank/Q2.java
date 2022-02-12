@@ -1,4 +1,4 @@
-package com.luoxiaobatman.assignment.interview.coding.cit;
+package com.luoxiaobatman.assignment.interview.coding.citibank;
 
 import java.util.ArrayList;
 import java.util.List;
