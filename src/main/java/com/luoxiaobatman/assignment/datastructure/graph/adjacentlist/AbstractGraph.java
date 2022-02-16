@@ -12,6 +12,9 @@ import java.util.*;
 import java.util.function.Consumer;
 
 public abstract class AbstractGraph implements Graph, Consumer<Visitor> {
+    /**
+     * 路劲压缩
+     */
     protected final Map<Identifier, Node> nodes = new HashMap<>();
 
     @Override
