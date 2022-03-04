@@ -28,7 +28,7 @@
         "website": "https://www.yonyou.com"
       },
       {
-        "company": "用友软件, 用友软件工程",
+        "company": "用友软件工程(瑞友科技)",
         "endDate": "2014-05-20",
         "position": "Java初级开发工程师",
         "startDate": "2012-09-01",
@@ -47,34 +47,30 @@
       },
       {
         "isVisible": true,
-        "level": "掌握",
+        "level": "了解",
+        "name": "计算机 | 操作系统 网络 算法 安全"
+      },
+      {
+        "isVisible": true,
+        "level": "熟悉",
         "name": "设计 | 面向对象 UML 设计模式"
       },
       {
         "isVisible": true,
-        "level": "掌握",
+        "level": "熟悉",
         "name": "中间件 | Mysql Redis Kafka ES etc..."
       },
       {
         "isVisible": true,
         "level": "熟悉",
-        "name": "微服务 | 服务拆分 配置中心 服务发现 日志 监控 链路追踪 负载均衡 etc..."
+        "name": "云原生 | K8S 容器 服务网格 微服务 服务拆分 etc..."
       },
       {
         "isVisible": true,
         "level": "熟悉",
-        "name": "其他编程语言 | Js Python Bash"
-      },
-      {
-        "isVisible": true,
-        "level": "熟悉",
-        "name": "Devops | Shell K8S Istio Docker etc..."
-      },
-      {
-        "isVisible": true,
-        "level": "熟悉",
-        "name": "计算机 | 操作系统(Linux) 网络协议栈 算法"
+        "name": "编程语言 | Js Python | 快速上手其他编程语言"
       }
+
     ],
     "visible": true
   },
@@ -343,12 +339,12 @@
       "pincode": 230022
     },
     "birthDate": "1989-02-21",
-    "email": "luoxiaobatman@gmail.com",
+    "email": "2081345469@qq.com",
     "firstName": "罗",
     "heading": "简介",
     "lastName": "潇",
     "phone": "+86 13521025643",
-    "subtitle": "Java软件开发工程师(期望薪资面议)"
+    "subtitle": "Java软件开发工程师(期望薪资25K)"
   },
   "public": true,
   "references": {

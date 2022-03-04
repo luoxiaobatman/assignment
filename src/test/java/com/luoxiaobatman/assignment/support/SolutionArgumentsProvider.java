@@ -26,6 +26,8 @@ public class SolutionArgumentsProvider implements ArgumentsProvider, AnnotationC
         register(String.class, new NoopArgumentsParser(","));
         register(int[][].class, new IntssArgumentsParser(",", "|"));
         register(List.class, new ListOfListIntegerArgumentParser(",", "|"));
+        register(Boolean.class, new BooleanArgumentsParser());
+        register(Double.class, new DoubleArgumentsParser());
     }
 
     static<E> void register(Class<E> subject, ArgumentsParser<E> parser) {

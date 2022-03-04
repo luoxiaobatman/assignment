@@ -20,7 +20,7 @@ public class IntegersArgumentsParser implements ArgumentsParser<Integer[]>{
 
         Integer[] result = new Integer[splitArguments.length];
         for (int i = 0; i < splitArguments.length; i++) {
-            if ("null".equals(splitArguments[i])) {
+            if ("null".equals(splitArguments[i]) || "".equals(splitArguments[i])) {
                 result[i] = null;
             } else {
                 result[i] = Integer.parseInt(splitArguments[i]);
