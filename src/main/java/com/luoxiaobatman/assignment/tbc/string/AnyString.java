@@ -1,14 +1,7 @@
-package com.luoxiaobatman.assignment.tbc;
+package com.luoxiaobatman.assignment.tbc.string;
 
-/**
- *
- */
 public class AnyString {
 
-    /**
-     * .length() 很粗暴 O(1)
-     * .codePointCount() 符合直觉, O(N)
-     */
     private void lengthTest() {
 //        String s = "\uD834\uDD1E";
         String s = "𝄞";
