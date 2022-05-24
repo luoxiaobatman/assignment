@@ -1,4 +1,4 @@
-package com.luoxiaobatman.assignment.interview.coding.huawei.spring2022;
+package com.luoxiaobatman.assignment.interview.huawei.spring2022;
 
 import com.luoxiaobatman.assignment.support.solution.AbstractSolution;
 import com.luoxiaobatman.assignment.support.solution.GenericSolution;

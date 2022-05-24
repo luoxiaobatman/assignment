@@ -1,5 +1,19 @@
 package com.luoxiaobatman.assignment.tbc.string;
 
+/**
+ * representation and interpretation
+ *
+ * change history
+ *
+ * compiler optimization
+ *   constant folding
+ *
+ * related algorithm&structure and there's big usages
+ *   editing length: search engine(word suggest)
+ *   KMP: word find
+ *   trie
+ *   digest and cipher
+ */
 public class AnyString {
 
     private void lengthTest() {

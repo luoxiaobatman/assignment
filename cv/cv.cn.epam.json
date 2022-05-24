@@ -8,6 +8,13 @@
     "heading": "工作经历",
     "items": [
       {
+        "company": "亿磐",
+        "endDate": "至今",
+        "position": "高级软件开发工程师",
+        "startDate": "2022-03-17",
+        "website": "https://epam.com"
+      },
+      {
         "company": "微博, 成都研发中心",
         "endDate": "2022-03-16",
         "position": "软件开发工程师",
@@ -338,7 +345,7 @@
       "pincode": 230022
     },
     "birthDate": "1989-02-21",
-    "email": "2081345469@qq.com",
+    "email": "luoxiaobatman@gmail.com",
     "firstName": "罗",
     "heading": "简介",
     "lastName": "潇",

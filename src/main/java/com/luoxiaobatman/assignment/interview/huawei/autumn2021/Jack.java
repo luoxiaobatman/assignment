@@ -1,4 +1,4 @@
-package com.luoxiaobatman.assignment.interview.coding.huawei.autumn2021;
+package com.luoxiaobatman.assignment.interview.huawei.autumn2021;
 
 import java.util.Arrays;
 import java.util.HashMap;

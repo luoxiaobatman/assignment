@@ -2,8 +2,9 @@
 
 > terminology:\
 item marked as * is subject\
-item marked as - is answering or thought
+item marked as - is my answer or thought
 
+#### Senior Software Engineer
 * Tech
     * Java
         * Basics
@@ -36,7 +37,22 @@ item marked as - is answering or thought
         * about spring-mvc related annotations
     * VCS
         * what's your git workflow
-* Coding
-    - None
 * System Design
     * Design bank account balance query api
+
+#### RFI Team Lead
+* Arch
+    * Assuming we are using micro-frontends and micro-services, let's design its authenticator domain architect.
+        - Prefer to use Kubernetes RESOURCE to solve this problem, talk about service mesh. 
+        - private&public key encryption.
+    * How to improve the performance of api?
+        - Very broad question.
+        - Identify the bottleneck. (DB IO? file IO? Cpu Computation? Network Issue?)
+* Management
+    * Hod do you keep your code quality high?
+    * How to maintain a fast-paced delivery speed?
+    * How do you evaluate team members' performance?
+* Middleware
+    * How do you use Kafka to decouple service, to improve system performance as a whole?
+
+asymmetric

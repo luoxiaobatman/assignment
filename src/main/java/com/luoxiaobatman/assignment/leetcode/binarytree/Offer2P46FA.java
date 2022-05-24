@@ -1,11 +1,8 @@
 package com.luoxiaobatman.assignment.leetcode.binarytree;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
- * 右到左广度优先遍历, 遇到下一层的第一个节点标注
- *
  * <a href="https://leetcode-cn.com/problems/WNC0Lk/">二叉树的右侧视图</a>
  */
 
@@ -13,29 +10,26 @@ public class Offer2P46FA {
 
     public List<Integer> rightSideView(TreeNode root) {
         if (root == null) return Collections.emptyList();
-        Queue<Object> q = new LinkedList<>();
-        q.offer(root);
-        q.offer(0);
+        Queue<TreeNode> queueWaitingToBeScanned = new LinkedList<>();
+        Queue<TreeNode> nextLevelNodes = new LinkedList<>();
+        queueWaitingToBeScanned.offer(root);
         TreeNode next;
-        TreeNode[] result = new TreeNode[100];
+        List<Integer> result = new ArrayList<>();
 
-        while ((next = (TreeNode) q.poll()) != null) {
-            int level = (int) q.poll();
-
-            if (result[level] == null) {
-                result[level] = next;
-            }
-            if (next.right != null) {
-                q.offer(next.right);
-                q.offer(level + 1);
-            }
-            if (next.left != null) {
-                q.offer(next.left);
-                q.offer(level + 1);
-            }
+        while ((next = queueWaitingToBeScanned.poll()) != null) {
+            result.add(next.val);
+            do {
+                if (next.right != null) {
+                    nextLevelNodes.offer(next.right);
+                }
+                if (next.left != null) {
+                    nextLevelNodes.offer(next.left);
+                }
+            } while ((next = queueWaitingToBeScanned.poll()) != null);
+            queueWaitingToBeScanned = nextLevelNodes;
+            nextLevelNodes = new LinkedList<>();
         }
-        return Arrays.stream(result).filter(Objects::nonNull)
-                .map(node -> node.val).collect(Collectors.toList());
+        return result;
     }
 
     private static class TreeNode {

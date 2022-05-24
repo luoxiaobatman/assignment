@@ -1,23 +1,20 @@
 * About the app
-    - Ins-like image-based content distribution software, users share and consume images on the app.
-    - Users can interact with the content (refer to, comments, likes), and can interact with other users (mutual fans, private chats or through water drops (a currency of Oasis app))
-    - Users can get water drops (a currency of the Oasis app) when using Oasis products.
-    - Oasis and Weibo are connected, dynamic exchanges their contents.
-    - The estimated carrying capacity of the project was 300K DAU, which was changed to 10M DAU at the initial stage of the official launch.
-* Participate in the design and construction of the server architecture
-    - Server version 1.0 app dau rises rapidly, and we went to microservice by splitting codes across departments and teams. 
-    - Server version 2.0 we adopt K8S, using it and its ecology to realize the platformization of logging, monitoring, and link tracking, and realizes convenient functions related to Devops.
-* Duty of Analyzing, designing and coding
-    - Responsible for main status publisher, main feed stream, user-defined data, intercommunication with Weibo and other related businesses.
-    - Use UML tools to disassemble and refine requirements, produce sequence diagrams, state diagrams and object designs, etc., and then pull in the team to review and code based on this.
-    - Object-oriented coding, striving for code readability, easy to expand, easy to scale
-    - Write Junit unit tests, integration tests across teams/departments if possible, to ensure delivery quality.
+    - Instagram-like image distribution software, users use app to post and consume images.
+    - Users can interact with posts through referring to & commenting & liking, and communicate with other users through following, chatting, giving gifts.
+    - User may gather water drops(a currency of the Oasis app). Water drop is used for exchanging real money, giving each others as gifts or buying consumer-products.
+    - Oasis and Weibo can dynamically exchange contents.
+    - The estimated carrying capacity of the project was 300K DAU. Due to popularity after official launch, it was changed to 10M DAU.
+    - Deployed in Sina Weibo private cloud.
+* Architect, Design, Code responsibilities
+    - After official launch, we refactored from monolithic to spring cloud microservice to increase delivery speed, and decouple services with clear boundary to achieve isolation. I was in charge of splitting parts of monolithic like Status-Service, Comment-Service, SSO, Anti-Junk, etc... among teams. I was also responsible for the business continuity during refactoring.
+    - Late 2021, we decided to adopt K8S, we planed to migrate all our microservices to deprecate spring cloud and enjoy better dev&ops experience. Until early 2022, I successfully migrated Status-Service and User-Service, adding bonuses like telemetry, auto-scaling, better isolation, better network issue handling, etc...
+    - For designing & coding, I was responsible for status publisher, main feed stream delivery system, user defined data related logic, intercommunication with Weibo, etc... I analyzed functional requirements and non-functional. I Heavily used UML tool to do the design before coding. I prefer Object-Oriented coding style, adhere to SOLID principle. I followed tech&trick like cache best practises, message queue, concurrent programming, sharding etc... to accomplish various tasks. I wrote unit tests to ensure delivery quality and maintenance. We did peer review before merging branches. As a result, We as a team can wrote bug free, maintainable, readable, high performance code.
 * Technology stack
-    - Springboot and its eco-system.
-    - Internet middleware such as Mysql, Redis, Kafka, Elasticsearch, etc.
-    - Docker containerization.
-    - K8S service scaling, grayscale publishing, sidecar mode (istio) log collection, JVM performance and business monitoring, microservice link tracking.
+    - Springboot, Spring Cloud and their eco-system.
+    - Middlewares such as Mysql, Redis, Kafka, Elasticsearch, etc...
+    - Docker, K8S and it's ecosystem.
+    - Reactjs and it's ecosystem, AntDesign UI framework.
 * Achievement
     - Completed milestones such as 30K DAUs and 1M DAUs.
-    - Eventual consistent design and coding experience for millions of daily active products.
-    - Experience accumulated in microservices
+    - Microservices and migrating to K8S.
+    - Architect to support high traffic situations.
