@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 
 import java.util.*;
 
+/**
+ * <a href="https://leetcode.cn/problems/course-schedule/">课程表</a>
+ */
 @AllArgsConstructor
 public class P207
         extends AbstractSolution<Boolean> implements GenericSolution<Boolean> {

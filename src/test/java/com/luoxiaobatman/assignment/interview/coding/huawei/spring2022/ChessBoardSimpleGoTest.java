@@ -1,6 +1,5 @@
 package com.luoxiaobatman.assignment.interview.coding.huawei.spring2022;
 
-import com.luoxiaobatman.assignment.interview.huawei.spring2022.ChessBoardSimpleGo;
 import com.luoxiaobatman.assignment.support.SolutionSource;
 import com.luoxiaobatman.assignment.support.solution.Solver;
 import org.junit.jupiter.params.ParameterizedTest;
