@@ -1,5 +1,9 @@
 package com.luoxiaobatman.assignment.leetcode.trie;
 
+import com.luoxiaobatman.assignment.support.solution.AbstractSolution;
+import com.luoxiaobatman.assignment.support.solution.GenericSolution;
+import lombok.AllArgsConstructor;
+
 /**
  * 字典树
  *
@@ -9,5 +13,72 @@ package com.luoxiaobatman.assignment.leetcode.trie;
  *
  * <a href="https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array/">数组中两个数的最大异或值</a>
  */
-public class P421MediumOP {
+@AllArgsConstructor
+public class P421MediumOP extends AbstractSolution<Integer> implements GenericSolution<Integer> {
+    private final int[] nums;
+    private final int MAX_BIT = 30;
+    private final int LEFT = 0;
+//    private final int RIGHT = 1;
+
+    @Override
+    public Integer doSolve() {
+        return findMaximumXOR(nums);
+    }
+
+    public int findMaximumXOR(int[] nums) {
+        Trie root = new Trie();
+        int max = 0;
+        for (int num : nums) {
+            add(root, num);
+            max = Math.max(check(root, num), max);
+        }
+        return max;
+    }
+
+    private int check(Trie root, int num) {
+        int result = 0;
+        Trie cur = root;
+        for (int i = MAX_BIT; i > -1 ; i--) {
+            int v = (num >> i) & 1;
+            if (v == LEFT) {
+                if (cur.right != null) {
+                    result += (1 << i);
+                    cur = cur.right;
+                } else if (cur.left != null) {
+                    cur = cur.left;
+                }
+            } else {
+                if (cur.left != null) {
+                    result += (1 << i);
+                    cur = cur.left;
+                } else if (cur.right != null) {
+                    cur = cur.right;
+                }
+            }
+        }
+        return result;
+    }
+
+    private void add(Trie root, int num) {
+        Trie cur = root;
+        for (int i = MAX_BIT; i > -1 ; i--) {
+            int v = (num >> i) & 1;
+            if (v == LEFT) {
+                if (cur.left == null) {
+                    cur.left = new Trie();
+                }
+                cur = cur.left;
+            } else {
+                if (cur.right == null) {
+                    cur.right = new Trie();
+                }
+                cur = cur.right;
+            }
+        }
+    }
+
+    private static class Trie {
+        Trie left;
+        Trie right;
+    }
 }

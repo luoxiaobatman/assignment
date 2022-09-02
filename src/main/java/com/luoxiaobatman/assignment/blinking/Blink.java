@@ -11,6 +11,8 @@ import javax.annotation.RegEx;
 import java.io.*;
 import java.time.LocalTime;
 import java.util.Properties;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Semaphore;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,11 +29,37 @@ import java.util.regex.Pattern;
  */
 @Slf4j
 public class Blink {
+    private static class T {
+//        private long p0, p1, p2, p3, p4, p5, p6, p7;
+        public long c = 0L;
+//        private long p9, p10, p11, p12, p13, p14, p15;
+    }
 
-    public static int FOO = 2;
-//    public static Logger logger = LoggerFactory.getLogger(Blink.class);
+    public static T[] ts = new T[2];
+    static {
+        ts[0] = new T();
+        ts[1] = new T();
+    }
 
-    public static void main(String[] args) {
-//        log.info(blink.FOO);
+    public static void main(String[] args) throws InterruptedException {
+        CountDownLatch latch = new CountDownLatch(2);
+//        T[] ts = new T[2];
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1e9; i++) {
+                ts[0].c = i;
+            }
+            latch.countDown();
+        });
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1e9; i++) {
+                ts[1].c = i;
+            }
+            latch.countDown();
+        });
+        long start = System.nanoTime();
+        t1.start();
+        t2.start();
+        latch.await();
+        System.out.println((System.nanoTime() - start) / 1e7);
     }
 }
